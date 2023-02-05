@@ -30,6 +30,21 @@
         width: 130px;
         font-size: 0.8rem;
       }
+      .download-button {
+        cursor: pointer;
+        background: transparent;
+        border: 0.5px solid #8b7e54;
+        color: #8b7e54;
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.6rem;
+        width: 250px;
+        font-size: 0.8rem;
+      }
+      .download-button.is-hidden {
+        display: none;
+      }
       .ui-header {
         position: fixed;
         top: 1rem;
@@ -56,6 +71,23 @@
         }
       }
     </style>
+
+    <script>
+      const isMobile = () => {
+        const ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/iphone|ipad|ipod|android.+mobile/)) return true;
+        return false;
+      };
+      window.onload = () => {
+        if (!isMobile()) {
+          const downloadButon = document.getElementById("download-button");
+          downloadButon.classList.remove("is-hidden");
+          downloadButon.addEventListener("click", () => {
+            location.href = "./bigakko.glb";
+          });
+        }
+      };
+    </script>
     <script
       type="module"
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
@@ -77,5 +109,8 @@
         ARで見る
       </button>
     </model-viewer>
+    <button id="download-button" class="download-button is-hidden">
+      3Dモデルをダウンロード（glbデータ）
+    </button>
   </body>
 </html>
