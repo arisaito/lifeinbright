@@ -1,0 +1,1 @@
+window.onload=function(){if(!navigator.userAgent.toLowerCase().match(/iphone|ipad|ipod|android.+mobile/)){var e=document.getElementById("download-button");e.classList.remove("is-hidden");var o=document.querySelector("model-viewer");e.addEventListener("click",(function(){location.href=o.src}))}};
