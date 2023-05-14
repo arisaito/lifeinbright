@@ -22,11 +22,11 @@
   </head>
   <body>
     <canvas class="stage" id="stage"></canvas>
-    <div class="loading is-hidden" id="loading"> 
+    <div class="loading is-hidden" id="loading">
       <p class="loading-text">Loading</p>
     </div>
     <div class="wrapper" id="wrapper"><span class="click-anywhere" id="click-anywhere">CLICK ANYWHERE</span>
-      <div class="bg">
+      <div class="bg" id="main-visual">
         <div class="bg-image"></div>
       </div>
       <div class="content">
@@ -41,7 +41,8 @@
           </div>
         </section>
         <section class="section section-column use" id="use">
-          <div class="section-column-bg"></div><img class="section-image" src="./assets/image/image-tote.jpg" alt="トートバッグの画像">
+          <div class="section-column-bg"></div>
+          <div class="section-image-wrapper"><img class="section-image" src="./assets/image/image-tote.jpg" alt="トートバッグの画像"></div>
           <div class="section-inner">
             <h2 class="section-title"><img class="section-title-image" src="./assets/image/section-title/image-title01.png" alt="テクノロジーをつかう"></h2>
             <p class="section-text">
@@ -55,7 +56,8 @@
           </div>
         </section>
         <section class="section section-column extra" id="extra">
-          <div class="section-column-bg"></div><img class="section-image" src="./assets/image/image-bigakko3d.png" alt="美学校3Dスキャンの画像">
+          <div class="section-column-bg"></div>
+          <div class="section-image-wrapper"><img class="section-image" src="./assets/image/image-bigakko3d.png" alt="美学校3Dスキャンの画像"></div>
           <div class="section-inner">
             <h2 class="section-title"><img class="section-title-image" src="./assets/image/section-title/image-title03.png" alt="おまけテクノロジー"></h2>
             <p class="section-text">
